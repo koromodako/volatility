@@ -157,7 +157,10 @@ def inet_ntop(address_family, packed_ip):
 def iterfind(data, string):
     """This function is called by the search_process_memory()
     method of windows, linux, and mac process objects"""
-
+    try:
+        string = string.encode()
+    except:
+        pass
     offset = data.find(string, 0)
     while offset >= 0:
         yield offset
