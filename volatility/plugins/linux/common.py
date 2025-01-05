@@ -278,7 +278,7 @@ def get_path(task, filp):
 
 
 def write_elf_file(dump_dir, task, elf_addr):
-    file_name = re.sub("[./\\\]", "", str(task.comm))
+    file_name = re.sub("[./\\]", "", str(task.comm))
 
     file_path = os.path.join(
         dump_dir, "%s.%d.%#8x" % (file_name, task.pid, elf_addr)

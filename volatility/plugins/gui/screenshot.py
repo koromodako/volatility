@@ -79,7 +79,7 @@ class Screenshot(windowstations.WndScan):
                 # Some desktops don't have any windows
                 if not win:
                     debug.warning(
-                        "{0}\{1}\{2} has no windows\n".format(
+                        "{0}\\{1}\\{2} has no windows\n".format(
                             desktop.dwSessionId,
                             window_station.Name,
                             desktop.Name,

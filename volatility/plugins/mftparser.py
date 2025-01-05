@@ -41,9 +41,9 @@ import binascii
 import os
 import volatility.poolscan as poolscan
 import sys
-import imp
+import importlib
 
-imp.reload(sys)
+importlib.reload(sys)
 
 
 class UnicodeString(basic.String):
